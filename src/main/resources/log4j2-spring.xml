@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration monitorInterval="1800">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+<!--            <PatternLayout pattern="[%d{HH:mm:ss.SSS}] %-5level [%class{36}.%M] [%L]- %msg%xEx%n"/>-->
+            <PatternLayout pattern="[%class{36}.%M] [%L]- %msg%xEx%n"/>
+        </Console>
+
+    </Appenders>
+
+    <Loggers>
+        <logger name="org.springframework" level="ERROR" />
+        <logger name="org.hibernate.validator" level="ERROR" />
+        <logger name="org.apache.http.impl.conn.Wire.wire" level="ERROR" />
+        <Root level="DEBUG">
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+
+</Configuration>
